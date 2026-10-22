@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave a Review</title>
+  <meta name="description" content="Share your restaurant experience">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="brand">
+        <div id="restaurantLogo" class="logo">🍽️</div>
+        <h1 id="restaurantName">Your Restaurant</h1>
+        <p>We'd love to hear about your experience.</p>
+      </div>
+
+      <div id="stepExperience" class="step active">
+        <h2>How was your experience?</h2>
+        <div class="experience-grid">
+          <button class="experience" data-level="okay">
+            <span>🙂</span>
+            <strong>Okay</strong>
+            <small>It was alright</small>
+          </button>
+          <button class="experience" data-level="good">
+            <span>😊</span>
+            <strong>Good</strong>
+            <small>We enjoyed it</small>
+          </button>
+          <button class="experience" data-level="amazing">
+            <span>🤩</span>
+            <strong>Amazing</strong>
+            <small>We loved it!</small>
+          </button>
+        </div>
+      </div>
+
+      <div id="stepRating" class="step">
+        <h2>What rating would you like to give?</h2>
+        <p class="hint">Please choose the rating that reflects your actual experience.</p>
+        <div id="stars" class="stars" aria-label="Choose a rating">
+          <button data-rating="1">★</button>
+          <button data-rating="2">★</button>
+          <button data-rating="3">★</button>
+          <button data-rating="4">★</button>
+          <button data-rating="5">★</button>
+        </div>
+        <p id="ratingText" class="rating-text">Select a rating</p>
+        <button id="continueRating" class="primary" disabled>Continue</button>
+      </div>
+
+      <div id="stepReviews" class="step">
+        <h2>Choose a review</h2>
+        <p class="hint">Pick the suggestion that best matches your experience. You can edit it before posting.</p>
+        <div id="reviewOptions"></div>
+        <button id="copyReview" class="primary" disabled>Copy Review</button>
+        <button id="googleReview" class="google" disabled>Review on Google</button>
+        <button id="startOver" class="secondary">Start Over</button>
+        <p id="status" class="status"></p>
+      </div>
+
+      <footer>
+        <span>Powered by your restaurant</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
